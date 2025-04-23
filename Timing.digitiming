@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimingFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.0" xmlns="http://www.ni.com/Semiconductor/Timing">
+  <TimingSheet>
+    <TimeSets>
+      <TimeSet name="I2S">
+        <Period>I2S.Period</Period>
+        <PinEdges>
+          <PinEdge pin="BCLK2">
+            <ReturnToHigh>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>0.5*I2S.Period</Return>
+              <Off>I2S.Period</Off>
+            </ReturnToHigh>
+            <CompareStrobe>
+              <Strobe>0.3*I2S.Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="FSYNC2">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>I2S.Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*I2S.Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="DIN2">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>I2S.Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*I2S.Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="Idle">
+        <Period>I2S.Period</Period>
+        <PinEdges>
+          <PinEdge pin="BCLK2">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>I2S.Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*I2S.Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="DIN2">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>I2S.Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*I2S.Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="FSYNC2">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>I2S.Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*I2S.Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+    </TimeSets>
+  </TimingSheet>
+</TimingFile>
