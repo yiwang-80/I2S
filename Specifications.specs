@@ -5,7 +5,17 @@
       <f:Definition>1/I2S.Freq</f:Definition>
     </f:Formula>
     <f:Formula symbol="Freq">
-      <f:Definition>48000</f:Definition>
+      <f:Definition>48000*(32*8+2)</f:Definition>
+      <f:Comment>32*4 left + 32*4 right + 2 buffer</f:Comment>
+    </f:Formula>
+  </Section>
+  <Section name="I2S_singleslot">
+    <f:Formula symbol="Period">
+      <f:Definition>1/I2S_singleslot.Freq</f:Definition>
+    </f:Formula>
+    <f:Formula symbol="Freq">
+      <f:Definition>48000*(32*2+2)</f:Definition>
+      <f:Comment>32 left + 32 right + 2 buffer</f:Comment>
     </f:Formula>
   </Section>
 </Specifications>

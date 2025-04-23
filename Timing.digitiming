@@ -79,6 +79,45 @@
           </PinEdge>
         </PinEdges>
       </TimeSet>
+      <TimeSet name="I2S_SingleSlot">
+        <Period>I2S_singleslot.Period</Period>
+        <PinEdges>
+          <PinEdge pin="BCLK2">
+            <ReturnToHigh>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>0.5*I2S_singleslot.Period</Return>
+              <Off>I2S_singleslot.Period</Off>
+            </ReturnToHigh>
+            <CompareStrobe>
+              <Strobe>0.3*I2S_singleslot.Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="FSYNC2">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>I2S_singleslot.Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*I2S_singleslot.Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="DIN2">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>I2S_singleslot.Period</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*I2S_singleslot.Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
     </TimeSets>
   </TimingSheet>
 </TimingFile>
