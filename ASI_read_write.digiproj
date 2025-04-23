@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="D60A0E36D02557CA32FF35E7BBAA579F6B4279DB6840E9F91B0BBD2ABFEBAFB248D731591D56BB7EF8AE243C12A1F2D8AAD3FD9B15CC978484692AAAD553D83A" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="4F329CE90C0DB001FD529C13FEFFDE00D8A49DD3C33A6FE9ABAAA134916D89E18564F3BCB0AF6DE34D631FEE3530195E1B7663A3114700128C270124F7F3D4B9" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="9.13.0.49711" FeatureSetName="Digital Pattern Editor" Name="http://www.ni.com/PatternBasedDigital" OldestCompatibleVersion="4.5.0.0" Version="5.3.1.49152" />
 		<ParsableNamespace AssemblyFileVersion="9.13.0.49711" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
@@ -27,6 +27,7 @@
 			<FileReference Id="e57bd4d8275b4ad58897601fead38030" ModelDefinitionType="SpecificationsDefinition" Name="Specifications.specs" StoragePath="Specifications.specs" />
 			<FileReference Id="5f97b3fcba644f0ea40ac908bb2188a9" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="Pattern.digipat" StoragePath="Pattern.digipat" />
 			<FileReference Id="dc27e80e6c644f64b8a1111b0abed284" ModelDefinitionType="SourceWaveformDefinition" Name="SourceWaveform.tdms" StoragePath="SourceWaveform.tdms" />
+			<FileReference Id="3d99a2835fe4865aa686847c8133110" ModelDefinitionType="DigitalPatternEditor.PatternDefinition" Name="i2s_4xslotsperframe.digipat" StoragePath="i2s_4xslotsperframe.digipat" />
 		</NameScopingEnvoy>
 		<EmbeddedDefinitionReference Id="f572205e0c64f5980a347aebcf0d80e" ModelDefinitionType="DigitalPatternEditor.ProjectPropertiesDefinition" Name="ProjectProperties">
 			<ProjectPropertiesDefinition xmlns="http://www.ni.com/PatternBasedDigital" />
