@@ -9,7 +9,7 @@ total_samples = 4096  # Number of samples to generate
 duration = total_samples/sample_rate            # seconds
 
 # Generate time axis
-t = np.linspace(0, duration, int(sample_rate * duration), endpoint=False)
+t = np.linspace(0, duration, int(total_samples), endpoint=False)
 
 # Generate sine wave
 sine_wave = amplitude * np.sin(2 * np.pi * frequency * t)
