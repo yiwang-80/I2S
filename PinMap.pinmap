@@ -2,6 +2,7 @@
 <PinMap xmlns="http://www.ni.com/TestStand/SemiconductorModule/PinMap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.5">
 	<Instruments>
 		<NIDigitalPatternInstrument name="HSD_6571_C1_S03" numberOfChannels="32" group="Digital" />
+		<NIDigitalPatternInstrument name="6570" numberOfChannels="32" group="Digital" />
 	</Instruments>
 	<Pins>
 		<DUTPin name="DIN2" />
@@ -19,8 +20,11 @@
 		<Site siteNumber="0" />
 	</Sites>
 	<Connections>
-		<Connection pin="BCLK2" siteNumber="0" instrument="HSD_6571_C1_S03" channel="0" />
-		<Connection pin="DIN2" siteNumber="0" instrument="HSD_6571_C1_S03" channel="1" />
-		<Connection pin="FSYNC2" siteNumber="0" instrument="HSD_6571_C1_S03" channel="2" />
+		<!--GPIO1-->
+		<Connection pin="BCLK2" siteNumber="0" instrument="6570" channel="1" />
+		<!--GPI1-->
+		<Connection pin="DIN2" siteNumber="0" instrument="6570" channel="0" />
+		<!--GPIO2-->
+		<Connection pin="FSYNC2" siteNumber="0" instrument="6570" channel="2" />
 	</Connections>
 </PinMap>
