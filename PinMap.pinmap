@@ -8,12 +8,14 @@
 		<DUTPin name="DIN2" />
 		<DUTPin name="BCLK2" />
 		<DUTPin name="FSYNC2" />
+		<DUTPin name="DOUT2" />
 	</Pins>
 	<PinGroups>
 		<PinGroup name="ALL_ASI_PINs">
 			<PinReference pin="DIN2" />
 			<PinReference pin="BCLK2" />
 			<PinReference pin="FSYNC2" />
+			<PinReference pin="DOUT2" />
 		</PinGroup>
 	</PinGroups>
 	<Sites>
@@ -23,8 +25,9 @@
 		<!--GPIO1-->
 		<Connection pin="BCLK2" siteNumber="0" instrument="6570" channel="1" />
 		<!--GPI1-->
-		<Connection pin="DIN2" siteNumber="0" instrument="6570" channel="0" />
+		<Connection pin="DIN2" siteNumber="0" instrument="6570" channel="2" />
+		<Connection pin="DOUT2" siteNumber="0" instrument="6570" channel="3" />
 		<!--GPIO2-->
-		<Connection pin="FSYNC2" siteNumber="0" instrument="6570" channel="2" />
+		<Connection pin="FSYNC2" siteNumber="0" instrument="6570" channel="0" />
 	</Connections>
 </PinMap>

@@ -3,17 +3,17 @@
   <TimingSheet>
     <TimeSets>
       <TimeSet name="I2S">
-        <Period>I2S.Period</Period>
+        <Period>I2S.BCLK_PERIOD</Period>
         <PinEdges>
           <PinEdge pin="BCLK2">
             <ReturnToHigh>
               <On>0</On>
               <Data>0</Data>
-              <Return>0.5*I2S.Period</Return>
-              <Off>I2S.Period</Off>
+              <Return>0.5*I2S.BCLK_PERIOD</Return>
+              <Off>I2S.BCLK_PERIOD</Off>
             </ReturnToHigh>
             <CompareStrobe>
-              <Strobe>0.3*I2S.Period</Strobe>
+              <Strobe>0.3*I2S.BCLK_PERIOD</Strobe>
             </CompareStrobe>
             <DataSource>Pattern</DataSource>
           </PinEdge>
@@ -21,10 +21,10 @@
             <DriveNonReturn>
               <On>0</On>
               <Data>0</Data>
-              <Off>I2S.Period</Off>
+              <Off>I2S.BCLK_PERIOD</Off>
             </DriveNonReturn>
             <CompareStrobe>
-              <Strobe>0.5*I2S.Period</Strobe>
+              <Strobe>0.5*I2S.BCLK_PERIOD</Strobe>
             </CompareStrobe>
             <DataSource>Pattern</DataSource>
           </PinEdge>
@@ -32,26 +32,37 @@
             <DriveNonReturn>
               <On>0</On>
               <Data>0</Data>
-              <Off>I2S.Period</Off>
+              <Off>I2S.BCLK_PERIOD</Off>
             </DriveNonReturn>
             <CompareStrobe>
-              <Strobe>0.5*I2S.Period</Strobe>
+              <Strobe>0.5*I2S.BCLK_PERIOD</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="DOUT2">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>I2S.BCLK_PERIOD</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5*I2S.BCLK_PERIOD</Strobe>
             </CompareStrobe>
             <DataSource>Pattern</DataSource>
           </PinEdge>
         </PinEdges>
       </TimeSet>
       <TimeSet name="Idle">
-        <Period>I2S.Period</Period>
+        <Period>I2S.BCLK_PERIOD</Period>
         <PinEdges>
           <PinEdge pin="BCLK2">
             <DriveNonReturn>
               <On>0</On>
               <Data>0</Data>
-              <Off>I2S.Period</Off>
+              <Off>I2S.BCLK_PERIOD</Off>
             </DriveNonReturn>
             <CompareStrobe>
-              <Strobe>0.5*I2S.Period</Strobe>
+              <Strobe>0.5*I2S.BCLK_PERIOD</Strobe>
             </CompareStrobe>
             <DataSource>Pattern</DataSource>
           </PinEdge>
@@ -59,10 +70,10 @@
             <DriveNonReturn>
               <On>0</On>
               <Data>0</Data>
-              <Off>I2S.Period</Off>
+              <Off>I2S.BCLK_PERIOD</Off>
             </DriveNonReturn>
             <CompareStrobe>
-              <Strobe>0.5*I2S.Period</Strobe>
+              <Strobe>0.5*I2S.BCLK_PERIOD</Strobe>
             </CompareStrobe>
             <DataSource>Pattern</DataSource>
           </PinEdge>
@@ -70,10 +81,10 @@
             <DriveNonReturn>
               <On>0</On>
               <Data>0</Data>
-              <Off>I2S.Period</Off>
+              <Off>I2S.BCLK_PERIOD</Off>
             </DriveNonReturn>
             <CompareStrobe>
-              <Strobe>0.5*I2S.Period</Strobe>
+              <Strobe>0.5*I2S.BCLK_PERIOD</Strobe>
             </CompareStrobe>
             <DataSource>Pattern</DataSource>
           </PinEdge>
@@ -113,6 +124,34 @@
             </DriveNonReturn>
             <CompareStrobe>
               <Strobe>0.5*I2S_singleslot.Period</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+        </PinEdges>
+      </TimeSet>
+      <TimeSet name="SOURCE_WAIT">
+        <Period>1 µs</Period>
+        <PinEdges>
+          <PinEdge pin="ALL_ASI_PINs">
+            <DriveNonReturn>
+              <On>0</On>
+              <Data>0</Data>
+              <Off>1 µs</Off>
+            </DriveNonReturn>
+            <CompareStrobe>
+              <Strobe>0.5 µs</Strobe>
+            </CompareStrobe>
+            <DataSource>Pattern</DataSource>
+          </PinEdge>
+          <PinEdge pin="BCLK2">
+            <ReturnToHigh>
+              <On>0</On>
+              <Data>0</Data>
+              <Return>0.5*I2S.BCLK_PERIOD</Return>
+              <Off>I2S.BCLK_PERIOD</Off>
+            </ReturnToHigh>
+            <CompareStrobe>
+              <Strobe>0.3*I2S.BCLK_PERIOD</Strobe>
             </CompareStrobe>
             <DataSource>Pattern</DataSource>
           </PinEdge>

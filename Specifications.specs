@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Specifications xmlns:f="http://www.ni.com/schemas/Semiconductor/Formula.xsd" schemaVersion="1.0" xmlns="http://www.ni.com/schemas/Semiconductor/Specifications.xsd">
   <Section name="I2S">
-    <f:Formula symbol="Period">
-      <f:Definition>1/I2S.Freq</f:Definition>
+    <f:Formula symbol="BCLK_PERIOD">
+      <f:Definition>1/I2S.BCLK_FREQ</f:Definition>
     </f:Formula>
-    <f:Formula symbol="Freq">
-      <f:Definition>48000*(32*8+2+8)</f:Definition>
-      <f:Comment>32*4 left + 32*4 right + 2 buffer + 4*2 padding</f:Comment>
+    <f:Formula symbol="BCLK_FREQ">
+      <f:Definition>48000*(384)</f:Definition>
+      <f:Comment>BCLK to FSYNC ratio 384</f:Comment>
     </f:Formula>
   </Section>
   <Section name="I2S_singleslot">
